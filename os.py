@@ -9,3 +9,8 @@ def sorted_walk(rootpath):
         for _, ndirs, nfiles in sorted_walk(ndirpath):
             yield (ndirpath, ndirs, nfiles)
 
+if __name__ == '__main__':
+    for dirpath, dirs, files in sorted_walk('..'):
+        print dirpath
+        print dirs
+        print files
